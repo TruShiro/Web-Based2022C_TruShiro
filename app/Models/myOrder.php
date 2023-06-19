@@ -1,0 +1,16 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class myOrder extends Model
+{
+    use HasFactory;
+    protected $fillable = ['orderDate','paymentStatus','UserID','amount'];
+
+    Public function MyOrder(){
+        return $this->belongsTo('App/Models/User');
+    }
+}
